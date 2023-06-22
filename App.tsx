@@ -5,7 +5,7 @@ import {Formik} from 'formik'
 import BouncyCheckbox from 'react-native-bouncy-checkbox'
 
 const PasswordSchema = Yup.object().shape({
-  passwordLength : Yup.number().min(4,'Should be minimum 4 characters long').max(16,'Should be maximum 16 characters long').required()
+  passwordLength : Yup.number().min(4,'Should be minimum 4 characters long').max(16,'Should be maximum 16 characters long').required("Length is Required!")
 })
 
 export default function App() {
